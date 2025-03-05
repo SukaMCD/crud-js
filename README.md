@@ -6,14 +6,13 @@ Proyek ini adalah aplikasi **CRUD (Create, Read, Update, Delete)** yang dibangun
 ## 🛠 Teknologi yang Digunakan
 - **Frontend:** React, React Router, Axios
 - **Backend:** Node.js, Express, MySQL
-- **Lainnya:** dotenv, cors, body-parser
 
 ## 🚀 Instalasi
 
 ### 1. Clone Repository
 ```sh
-git clone https://github.com/username/repo-name.git
-cd repo-name
+git clone https://github.com/SukaMCD/crud-js.git
+cd crud-js
 ```
 
 ### 2. Install Dependencies
@@ -68,8 +67,6 @@ crud-js/
 │   ├── package-lock.json
 │   ├── .gitignore
 │   ├── README.md
-│── crud-py/            # (Opsional, jika proyek lain di dalam repo ini)
-│── crud-js.zip         # (Opsional, jika file zip proyek ada di dalam repo)
 ```
 
 ## 🗄 Database
