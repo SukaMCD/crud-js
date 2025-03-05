@@ -1,35 +1,29 @@
 # CRUD JS (Node.js, React, Express)
 
 ## 📌 Deskripsi
-
 Proyek ini adalah aplikasi **CRUD (Create, Read, Update, Delete)** yang dibangun menggunakan **Node.js, Express, dan React**. Backend menggunakan **Express.js** sebagai REST API, sedangkan frontend menggunakan **React** untuk antarmuka pengguna.
 
 ## 🛠 Teknologi yang Digunakan
-
 - **Frontend:** React, React Router, Axios
-- **Backend:** Node.js dan Express
+- **Backend:** Node.js, Express, MySQL
 - **Lainnya:** dotenv, cors, body-parser
 
 ## 🚀 Instalasi
 
 ### 1. Clone Repository
-
 ```sh
-git clone https://github.com/SukaMCD/crud-js.git
+git clone https://github.com/username/repo-name.git
 cd repo-name
 ```
 
 ### 2. Install Dependencies
-
 #### Backend
-
 ```sh
 cd backend
 npm install
 ```
 
 #### Frontend
-
 ```sh
 cd frontend
 npm install
@@ -38,29 +32,25 @@ npm install
 ## ▶️ Menjalankan Aplikasi
 
 ### 1. Jalankan Backend
-
 ```sh
 cd backend
 npm start
 ```
 
 ### 2. Jalankan Frontend
-
 ```sh
 cd frontend
 npm start
 ```
-
 Aplikasi akan berjalan di `http://localhost:3000/` (default React).
 
 ## 📂 Struktur Proyek
-
 ```
 crud-js/
 │── backend/
 │   ├── config/          # Konfigurasi aplikasi
 │   ├── controllers/     # Logika bisnis aplikasi
-│   ├── models/         # Schema database (jika menggunakan MongoDB)
+│   ├── models/         # Schema database
 │   ├── routes/         # API routes
 │   ├── node_modules/    # Dependensi backend
 │   ├── package.json     # File konfigurasi npm
@@ -78,24 +68,48 @@ crud-js/
 │   ├── package-lock.json
 │   ├── .gitignore
 │   ├── README.md
+│── crud-py/            # (Opsional, jika proyek lain di dalam repo ini)
+│── crud-js.zip         # (Opsional, jika file zip proyek ada di dalam repo)
+```
+
+## 🗄 Database
+Aplikasi ini menggunakan **MySQL** sebagai database.
+
+### 📌 Struktur Tabel `users`
+```sql
+CREATE TABLE users (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    gender VARCHAR(255) NOT NULL,
+    createdAt DATETIME NOT NULL,
+    updatedAt DATETIME NOT NULL
+);
+```
+
+### 🔧 Konfigurasi Koneksi Database
+Buat file `.env` di dalam folder **backend** dan tambahkan konfigurasi berikut:
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=crud_db
+DB_PORT=3306
 ```
 
 ## 📡 API Endpoint
-
 **Base URL:** `http://localhost:5000/api`
 
 ### 📍 Endpoint CRUD
-
-| Method | Endpoint   | Deskripsi                       |
-| ------ | ---------- | ------------------------------- |
-| GET    | /items     | Mendapatkan semua data          |
-| GET    | /items/:id | Mendapatkan data berdasarkan ID |
-| POST   | /items     | Menambahkan data baru           |
-| PUT    | /items/:id | Mengupdate data berdasarkan ID  |
-| DELETE | /items/:id | Menghapus data berdasarkan ID   |
+| Method  | Endpoint       | Deskripsi             |
+|---------|--------------|-----------------------|
+| GET     | /users       | Mendapatkan semua data pengguna |
+| GET     | /users/:id   | Mendapatkan data pengguna berdasarkan ID |
+| POST    | /users       | Menambahkan pengguna baru |
+| PUT     | /users/:id   | Mengupdate pengguna berdasarkan ID |
+| DELETE  | /users/:id   | Menghapus pengguna berdasarkan ID |
 
 ## 💡 Kontribusi
-
 1. Fork repository ini
 2. Buat branch fitur baru (`git checkout -b fitur-baru`)
 3. Commit perubahan (`git commit -m 'Menambahkan fitur baru'`)
@@ -103,5 +117,5 @@ crud-js/
 5. Buat pull request
 
 ## 📜 Lisensi
-
 Proyek ini dilisensikan di bawah **MIT License**.
+
