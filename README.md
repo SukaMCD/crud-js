@@ -1,7 +1,7 @@
 # CRUD JS (Node.js, React, Express)
 
 ## 📌 Deskripsi
-Proyek ini adalah aplikasi **CRot (Create, Read, Update, Delete)** yang dibangun menggunakan **Node.js, Express, dan React**. Backend menggunakan **Express.js** sebagai REST API, sedangkan frontend menggunakan **React** untuk antarmuka pengguna.
+Proyek ini adalah aplikasi **CRUD (Create, Read, Update, Delete)** yang dibangun menggunakan **Node.js, Express, dan React**. Backend menggunakan **Express.js** sebagai REST API, sedangkan frontend menggunakan **React** untuk antarmuka pengguna.
 
 ## 🛠 Teknologi yang Digunakan
 - **Frontend:** React, React Router, Axios
